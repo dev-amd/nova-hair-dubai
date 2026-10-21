@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const geist = Geist({
@@ -43,6 +44,8 @@ export default function RootLayout({
         {/* Hidden default Google Element */}
         <div id="google_translate_element" style={{ display: "none" }} />
         {children}
+
+        <Analytics />
       </body>
     </html>
   );
